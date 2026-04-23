@@ -67,7 +67,6 @@
       100% { transform: translateY(-100px) scale(1); opacity: 0; }
     }
 
-    /* Age badge — top of hero */
     .age-badge {
       display: inline-flex;
       align-items: center;
@@ -92,7 +91,6 @@
       font-size: 16px;
     }
 
-    /* Giant display text */
     .im-hero-title {
       font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(60px, 12vw, 180px);
@@ -127,7 +125,6 @@
       background-clip: text;
     }
 
-    /* Distance subtitle */
     .im-distance {
       font-size: clamp(14px, 2vw, 20px);
       font-weight: 300;
@@ -144,7 +141,6 @@
       font-weight: 500;
     }
 
-    /* Scroll prompt */
     .im-scroll {
       position: absolute;
       bottom: 40px;
@@ -189,12 +185,8 @@
     }
 
     /* ── RACE TIMELINE ── */
-    .race-timeline {
-      padding: 0;
-      position: relative;
-    }
+    .race-timeline { padding: 0; position: relative; }
 
-    /* Horizontal race strip */
     .race-strip {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -214,13 +206,8 @@
       transition: background 0.5s ease;
     }
 
-    .race-leg:last-child {
-      border-right: none;
-    }
-
-    .race-leg:hover {
-      background: rgba(255, 255, 255, 0.02);
-    }
+    .race-leg:last-child { border-right: none; }
+    .race-leg:hover { background: rgba(255, 255, 255, 0.02); }
 
     .race-leg::before {
       content: attr(data-number);
@@ -298,15 +285,11 @@
       transition: transform 1.5s var(--transition-smooth);
     }
 
-    .race-leg.animated .leg-bar-fill {
-      transform: scaleX(1);
-    }
-
+    .race-leg.animated .leg-bar-fill { transform: scaleX(1); }
     .leg-bar-fill.swim { max-width: 25%; }
     .leg-bar-fill.bike { max-width: 50%; }
     .leg-bar-fill.run { max-width: 40%; }
 
-    /* Total time banner */
     .total-banner {
       padding: 60px 48px;
       text-align: center;
@@ -333,7 +316,7 @@
       background-clip: text;
     }
 
-    /* ── STORY SECTION — Cinematic Scroll ── */
+    /* ── STORY ── */
     .story-section {
       padding: 160px 48px;
       max-width: 900px;
@@ -361,10 +344,7 @@
       border-radius: 100px;
     }
 
-    .story-block {
-      margin-bottom: 48px;
-      position: relative;
-    }
+    .story-block { margin-bottom: 48px; }
 
     .story-block p {
       font-size: clamp(17px, 1.5vw, 20px);
@@ -373,18 +353,9 @@
       font-weight: 300;
     }
 
-    .story-block p strong {
-      color: rgba(255, 255, 255, 0.9);
-      font-weight: 500;
-    }
+    .story-block p strong { color: rgba(255, 255, 255, 0.9); font-weight: 500; }
+    .story-block p em { color: var(--accent); font-style: normal; font-weight: 500; }
 
-    .story-block p em {
-      color: var(--accent);
-      font-style: normal;
-      font-weight: 500;
-    }
-
-    /* Pull quote */
     .pull-quote {
       padding: 60px 0;
       margin: 60px 0;
@@ -412,7 +383,7 @@
       display: block;
     }
 
-    /* ── HARDSHIP GRID ── */
+    /* ── HARDSHIP ── */
     .hardship-section {
       padding: 120px 48px;
       border-top: 1px solid var(--border);
@@ -433,18 +404,11 @@
       padding: 60px 40px;
       text-align: center;
       transition: background 0.4s ease;
-      position: relative;
     }
 
-    .hardship-card:hover {
-      background: rgba(255, 255, 255, 0.02);
-    }
+    .hardship-card:hover { background: rgba(255, 255, 255, 0.02); }
 
-    .hardship-icon {
-      font-size: 32px;
-      margin-bottom: 20px;
-      display: block;
-    }
+    .hardship-icon { font-size: 32px; margin-bottom: 20px; display: block; }
 
     .hardship-card h4 {
       font-family: 'Space Grotesk', sans-serif;
@@ -503,17 +467,9 @@
     .final-words.visible .line:nth-child(1) { transition-delay: 0.2s; }
     .final-words.visible .line:nth-child(2) { transition-delay: 0.5s; }
     .final-words.visible .line:nth-child(3) { transition-delay: 0.8s; }
+    .final-words.visible .line { opacity: 1; transform: translateY(0); }
+    .final-words .line:last-child { color: var(--accent); }
 
-    .final-words.visible .line {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .final-words .line:last-child {
-      color: var(--accent);
-    }
-
-    /* Finish line visual */
     .finish-line {
       width: 100%;
       max-width: 500px;
@@ -533,9 +489,7 @@
       transition: width 2s var(--transition-smooth);
     }
 
-    .finish-line.visible::before {
-      width: 100%;
-    }
+    .finish-line.visible::before { width: 100%; }
 
     .finish-badge {
       display: inline-flex;
@@ -553,11 +507,8 @@
       margin-top: 20px;
     }
 
-    /* ── IMAGE SECTION ── */
-    .im-image-section {
-      padding: 0 48px;
-      margin: 80px 0;
-    }
+    /* ── IMAGE ── */
+    .im-image-section { padding: 0 48px; margin: 80px 0; }
 
     .im-image-wrapper {
       width: 100%;
@@ -575,9 +526,7 @@
       transition: transform 0.8s var(--transition-smooth);
     }
 
-    .im-image-wrapper:hover img {
-      transform: scale(1.03);
-    }
+    .im-image-wrapper:hover img { transform: scale(1.03); }
 
     .im-image-wrapper::after {
       content: '';
@@ -587,52 +536,250 @@
       pointer-events: none;
     }
 
+    /* ══════════════════════════════════════ */
+    /* ── REELS SECTION ── */
+    /* ══════════════════════════════════════ */
+    .reels-section {
+      padding: 140px 48px;
+      border-top: 1px solid var(--border);
+    }
+
+    .reels-header {
+      margin-bottom: 60px;
+    }
+
+    .reels-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .reel-embed-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg-elevated);
+      transition: transform 0.4s var(--transition-smooth),
+                  border-color 0.3s ease,
+                  box-shadow 0.4s ease;
+      position: relative;
+    }
+
+    .reel-embed-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--border-hover);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .reel-embed-card iframe {
+      width: 100%;
+      border: none;
+      display: block;
+    }
+
+    .reel-card-footer {
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .reel-card-footer span {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .reel-card-footer a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: opacity 0.3s ease;
+    }
+
+    .reel-card-footer a:hover { opacity: 0.7; }
+
+    /* Reel label badge */
+    .reel-label {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      padding: 6px 14px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      z-index: 2;
+    }
+
+    /* ══════════════════════════════════════ */
+    /* ── CONTACT SECTION ── */
+    /* ══════════════════════════════════════ */
+    .contact-section {
+      padding: 160px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-section::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(205, 255, 0, 0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .contact-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(48px, 7vw, 100px);
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 0.95;
+      margin-bottom: 20px;
+    }
+
+    .contact-title .accent { color: var(--accent); }
+
+    .contact-sub {
+      font-size: clamp(16px, 1.5vw, 20px);
+      color: var(--text-secondary);
+      font-weight: 300;
+      max-width: 500px;
+      margin: 0 auto 60px;
+      line-height: 1.6;
+    }
+
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 700px;
+      margin: 0 auto 60px;
+    }
+
+    .contact-card {
+      padding: 40px 32px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--card-bg);
+      text-align: center;
+      transition: transform 0.4s var(--transition-smooth),
+                  border-color 0.3s ease,
+                  background 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-hover);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .contact-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+
+    .contact-card:hover .contact-icon {
+      border-color: var(--accent);
+      background: rgba(205, 255, 0, 0.1);
+    }
+
+    .contact-card h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .contact-card .handle {
+      font-size: 14px;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    .contact-card .contact-btn {
+      margin-top: 8px;
+      padding: 10px 24px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text);
+      transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+      display: inline-block;
+    }
+
+    .contact-card:hover .contact-btn {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #000;
+    }
+
+    .contact-email {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 20px;
+    }
+
+    .contact-email a {
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2px;
+      transition: color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .contact-email a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      .race-strip {
-        grid-template-columns: 1fr;
-        min-height: auto;
-      }
-
-      .race-leg {
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-        padding: 60px 32px;
-      }
-
-      .race-leg:last-child {
-        border-bottom: none;
-      }
-
-      .hardship-grid {
-        grid-template-columns: 1fr;
-      }
+      .race-strip { grid-template-columns: 1fr; min-height: auto; }
+      .race-leg { border-right: none; border-bottom: 1px solid var(--border); padding: 60px 32px; }
+      .race-leg:last-child { border-bottom: none; }
+      .hardship-grid { grid-template-columns: 1fr; }
+      .reels-grid { grid-template-columns: 1fr; max-width: 500px; }
     }
 
     @media (max-width: 768px) {
-      .story-section {
-        padding: 100px 24px;
-      }
-
-      .hardship-section {
-        padding: 80px 24px;
-      }
-
-      .final-statement {
-        padding: 80px 24px;
-      }
-
-      .im-image-section {
-        padding: 0 24px;
-      }
-
-      .total-banner {
-        padding: 40px 24px;
-      }
-
-      .story-quote-large {
-        padding-left: 20px;
-      }
+      .story-section { padding: 100px 24px; }
+      .hardship-section { padding: 80px 24px; }
+      .final-statement { padding: 80px 24px; }
+      .im-image-section { padding: 0 24px; }
+      .total-banner { padding: 40px 24px; }
+      .story-quote-large { padding-left: 20px; }
+      .reels-section { padding: 100px 24px; }
+      .contact-section { padding: 100px 24px; }
+      .contact-cards { grid-template-columns: 1fr; max-width: 350px; }
     }
   </style>
 </head>
@@ -649,9 +796,10 @@
   </button>
 
   <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="index.html#work">Work</a>
-    <a href="index.html#contact" class="nav-cta">Contact</a>
+    <a href="#race">Race</a>
+    <a href="#story">Story</a>
+    <a href="#reels">Reels</a>
+    <a href="#contact" class="nav-cta">Contact</a>
   </div>
 </nav>
 
@@ -696,9 +844,8 @@
 <!-- ════════════════════════════════════ -->
 <!-- RACE SPLITS -->
 <!-- ════════════════════════════════════ -->
-<section class="race-timeline">
+<section class="race-timeline" id="race">
   <div class="race-strip">
-
     <div class="race-leg" data-number="01">
       <div class="leg-icon">🏊</div>
       <span class="leg-label">Leg 01 — Swim</span>
@@ -728,7 +875,6 @@
         <div class="leg-bar-fill run" style="width: 100%;"></div>
       </div>
     </div>
-
   </div>
 
   <div class="total-banner">
@@ -750,7 +896,7 @@
 <!-- ════════════════════════════════════ -->
 <!-- THE STORY -->
 <!-- ════════════════════════════════════ -->
-<section class="story-section">
+<section class="story-section" id="story">
 
   <div class="story-quote-large reveal">
     I've finally ticked off something I've always wanted to do.
@@ -845,7 +991,6 @@
 <!-- FINAL STATEMENT -->
 <!-- ════════════════════════════════════ -->
 <section class="final-statement">
-
   <div class="final-words" id="finalWords">
     <span class="line">I trained.</span>
     <span class="line">I broke.</span>
@@ -857,26 +1002,97 @@
   <div class="finish-badge reveal">
     ✓ Ironman 70.3 — Finisher
   </div>
-
 </section>
 
 <!-- ════════════════════════════════════ -->
-<!-- CTA -->
+<!-- INSTAGRAM REELS -->
 <!-- ════════════════════════════════════ -->
-<section class="cta-section">
-  <h2 class="cta-title reveal">See More Work</h2>
-  <div class="cta-links reveal reveal-delay-1">
-    <a href="remax-case-study.html" class="cta-link">RE/MAX NZ →</a>
-    <a href="instagram-case-study.html" class="cta-link">Instagram →</a>
-    <a href="index.html" class="cta-link">All Projects →</a>
+<section class="reels-section" id="reels">
+  <div class="reels-header">
+    <div class="section-label reveal"><span class="line"></span> Content</div>
+    <h2 class="section-title reveal reveal-delay-1">The Journey on Film</h2>
+  </div>
+
+  <div class="reels-grid">
+
+    <!-- Reel 1 -->
+    <div class="reel-embed-card reveal">
+      <span class="reel-label">📍 Reel 01</span>
+      <iframe 
+        src="https://www.instagram.com/p/DOR704JiuyF/embed" 
+        height="580" 
+        frameborder="0" 
+        scrolling="no" 
+        allowtransparency="true"
+        loading="lazy">
+      </iframe>
+      <div class="reel-card-footer">
+        <span>@patrickkhang</span>
+        <a href="https://www.instagram.com/p/DOR704JiuyF/" target="_blank">View on IG →</a>
+      </div>
+    </div>
+
+    <!-- Reel 2 -->
+    <div class="reel-embed-card reveal reveal-delay-1">
+      <span class="reel-label">📍 Reel 02</span>
+      <iframe 
+        src="https://www.instagram.com/p/DRQ1iUuDPD8/embed" 
+        height="580" 
+        frameborder="0" 
+        scrolling="no" 
+        allowtransparency="true"
+        loading="lazy">
+      </iframe>
+      <div class="reel-card-footer">
+        <span>@patrickkhang</span>
+        <a href="https://www.instagram.com/p/DRQ1iUuDPD8/" target="_blank">View on IG →</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
+<!-- ════════════════════════════════════ -->
+<!-- CONTACT -->
+<!-- ════════════════════════════════════ -->
+<section class="contact-section" id="contact">
+  <div class="section-label reveal"><span class="line"></span> Get in Touch</div>
+  <h2 class="contact-title reveal reveal-delay-1">
+    Let's<br><span class="accent">Connect</span>
+  </h2>
+  <p class="contact-sub reveal reveal-delay-2">
+    Whether it's a project, opportunity, or just a conversation — I'd love to hear from you.
+  </p>
+
+  <div class="contact-cards">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/patrickkhang/" target="_blank" class="contact-card reveal">
+      <div class="contact-icon">📸</div>
+      <h4>Instagram</h4>
+      <span class="handle">@patrickkhang</span>
+      <span class="contact-btn">Follow →</span>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/patrick-khang-445991215/" target="_blank" class="contact-card reveal reveal-delay-1">
+      <div class="contact-icon">💼</div>
+      <h4>LinkedIn</h4>
+      <span class="handle">Patrick Khang</span>
+      <span class="contact-btn">Connect →</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════ -->
+<!-- FOOTER -->
+<!-- ════════════════════════════════════ -->
 <footer>
   <p>© 2025 Patrick Khang. All rights reserved.</p>
   <div class="footer-links">
+    <a href="https://www.instagram.com/patrickkhang/" target="_blank">Instagram</a>
     <a href="https://www.linkedin.com/in/patrick-khang-445991215/" target="_blank">LinkedIn</a>
-    <a href="https://instagram.com/paddyk_travels" target="_blank">Instagram</a>
   </div>
 </footer>
 
@@ -884,39 +1100,29 @@
 
 <!-- Ironman-specific animations -->
 <script>
-  // Race leg bar animation on scroll
   const raceLegs = document.querySelectorAll('.race-leg');
-
   const legObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('animated');
-          }, 300);
+          setTimeout(() => { entry.target.classList.add('animated'); }, 300);
         }
       });
     },
     { threshold: 0.3 }
   );
-
   raceLegs.forEach(leg => legObserver.observe(leg));
 
-  // Final words stagger reveal
   const finalWords = document.getElementById('finalWords');
   const finishLine = document.getElementById('finishLine');
-
   const finalObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
       });
     },
     { threshold: 0.4 }
   );
-
   if (finalWords) finalObserver.observe(finalWords);
   if (finishLine) finalObserver.observe(finishLine);
 </script>
